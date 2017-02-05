@@ -49,8 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = 'Welcome/random';
+$route['default_controller'] = 'Hogwarts';
+$route['404_override'] = 'Hogwarts/random';
 $route['translate_uri_dashes'] = FALSE;
 $route['([a-z]{4})/bingo'] = 'Bingo';
 $route['show/(:num)'] = 'First/gimme/$1';
@@ -63,4 +63,5 @@ $route['dunno'] = function() {
 	readfile($source); // dish it
 	die(); // and we don't have to go any further
 }; 
-$route['comp\d+/wisdom'] = "wise/bingo";   
+$route['comp\d+/wisdom'] = "wise/bingo";  
+$route['lock/(:any)/(:any)'] = 'Hogwarts/shucks';
